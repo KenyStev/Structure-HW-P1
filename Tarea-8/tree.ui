@@ -35,7 +35,7 @@
       <x>480</x>
       <y>20</y>
       <width>181</width>
-      <height>151</height>
+      <height>141</height>
      </rect>
     </property>
     <column>
@@ -44,13 +44,13 @@
      </property>
     </column>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>350</x>
       <y>20</y>
       <width>121</width>
-      <height>146</height>
+      <height>257</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -78,8 +78,48 @@
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QPushButton" name="btnPreOrden">
+       <property name="text">
+        <string>PreOrden</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnInOrden">
+       <property name="text">
+        <string>InOrden</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnPostOrden">
+       <property name="text">
+        <string>PostOrden</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
+   <widget class="QTextEdit" name="textOrder">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>170</y>
+      <width>181</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+   <zorder>tree</zorder>
+   <zorder>treeSearched</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>btnPreOrden</zorder>
+   <zorder>btnInOrden</zorder>
+   <zorder>btnPostOrden</zorder>
+   <zorder>btnPostOrden</zorder>
+   <zorder>btnInOrden</zorder>
+   <zorder>textOrder</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

@@ -98,6 +98,50 @@ void Tree::dispose(int v, Nodo *&root)
     }
 }
 
+QString Tree::preOrder(Nodo *root)
+{
+    if(root)
+    {
+        QString order = QString("%1").arg(root->valor);
+        if(root->izq)
+            order += " - " + preOrder(root->izq);
+        if(root->der)
+            order += " - " + preOrder(root->der);
+        return  order;
+    }
+    return "";
+}
+
+QString Tree::inOrder(Nodo *root)
+{
+    if(root)
+    {
+        QString order = "";
+        if(root->izq)
+            order += inOrder(root->izq);
+        order += QString("%1").arg(root->valor) + " - ";
+        if(root->der)
+            order += inOrder(root->der);;
+        return  order;
+    }
+    return "";
+}
+
+QString Tree::postOrder(Nodo *root)
+{
+    if(root)
+    {
+        QString order = "";
+        if(root->izq)
+            order += postOrder(root->izq);
+        if(root->der)
+            order += postOrder(root->der);
+        order += QString("%1").arg(root->valor) + " - ";
+        return order;
+    }
+    return "";
+}
+
 void Tree::on_btnAdd_clicked()
 {
     if(ui->txtValor->text()!="")
@@ -145,4 +189,19 @@ void Tree::on_btnSeach_clicked()
             QMessageBox::warning(this,"Error!","No Encontrado");
         }
     }
+}
+
+void Tree::on_btnPreOrden_clicked()
+{
+    ui->textOrder->setText(preOrder(root));
+}
+
+void Tree::on_btnInOrden_clicked()
+{
+    ui->textOrder->setText(inOrder(root));
+}
+
+void Tree::on_btnPostOrden_clicked()
+{
+    ui->textOrder->setText(postOrder(root));
 }

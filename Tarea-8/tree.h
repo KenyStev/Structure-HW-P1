@@ -5,6 +5,7 @@
 #include "Tarea-8/nodo.h"
 #include <QTreeWidgetItem>
 #include <QMessageBox>
+#include <QString>
 
 namespace Ui {
 class Tree;
@@ -22,6 +23,10 @@ public:
     Nodo* search(int);
     Nodo* search(int,Nodo*);
     void dispose(int,Nodo*&);
+    QString preOrder(Nodo*);
+    QString inOrder(Nodo*);
+    QString postOrder(Nodo*);
+
 
 private slots:
     void on_btnAdd_clicked();
@@ -29,6 +34,12 @@ private slots:
     void on_btnDelete_clicked();
 
     void on_btnSeach_clicked();
+
+    void on_btnPreOrden_clicked();
+
+    void on_btnInOrden_clicked();
+
+    void on_btnPostOrden_clicked();
 
 private:
     Ui::Tree *ui;

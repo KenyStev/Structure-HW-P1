@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>371</width>
+    <height>279</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -124,10 +124,16 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>371</width>
      <height>27</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuKenyStev">
+    <property name="title">
+     <string>KenyStev</string>
+    </property>
+   </widget>
+   <addaction name="menuKenyStev"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
